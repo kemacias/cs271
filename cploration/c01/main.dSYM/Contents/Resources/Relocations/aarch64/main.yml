@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/katebohning/Documents/arch/nand2tetris/projects/cploration/c01/main'
+relocations:     []
+...
