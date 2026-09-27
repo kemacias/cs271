@@ -2,7 +2,7 @@
  * C-ploration 1 for CS 271
  *
  * [NAME] $Kate Macias$
- * [TERM] FALL $2026$
+ * [TERM] FALL $2026c$
  *
  ****************************************/
 
