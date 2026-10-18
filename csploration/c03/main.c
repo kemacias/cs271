@@ -35,13 +35,7 @@ int main(int argc, const char *argv[])
     char line[MAX_LINE_LENGTH] = {0};
     unsigned int line_num = 0;
 
-    while (fgets(line, sizeof(line), fin))
-    {
-        FILE *fout = fopen( out_file, "w+" );
-        }
-
-    char line[MAX_LINE_LENGTH] = {0};
-    unsigned int line_num = 0;
+    FILE *fout = fopen( out_file, "w" );
 
     while (fgets(line, sizeof(line), fin)) {
         line_num++;
@@ -55,5 +49,5 @@ int main(int argc, const char *argv[])
     fclose(fout);
 
 
-    return 1;
+    return 0;
 }
