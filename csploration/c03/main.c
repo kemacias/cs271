@@ -36,15 +36,24 @@ int main(int argc, const char *argv[])
     unsigned int line_num = 0;
 
     while (fgets(line, sizeof(line), fin))
+    {
+        FILE *fout = fopen( out_file, "w+" );
+        }
+
+    char line[MAX_LINE_LENGTH] = {0};
+    unsigned int line_num = 0;
+
+    while (fgets(line, sizeof(line), fin)) {
+        line_num++;
+        printf("[%04d] %s", line_num, line);
+        fprintf(fout, "%s", line);
+    }
 
 
-}
 
-    //argv[0] is the file name
-
-
+    fclose(fin);
+    fclose(fout);
 
 
-
-	return 1;
+    return 1;
 }
