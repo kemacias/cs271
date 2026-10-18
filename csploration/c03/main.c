@@ -43,8 +43,6 @@ int main(int argc, const char *argv[])
         fprintf(fout, "%s", line);
     }
 
-
-
     fclose(fin);
     fclose(fout);
 
