@@ -1,8 +1,8 @@
 /****************************************
  * C-ploration 4 for CS 271
  *
- * [NAME] $YOUR_NAME$
- * [TERM] FALL $YEAR$
+ * [NAME] $Kate Macias$
+ * [TERM] FALL $2026$
  *
  ****************************************/
 #include <stdio.h>
