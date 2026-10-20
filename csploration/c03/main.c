@@ -43,11 +43,9 @@ int main(int argc, const char *argv[])
         fprintf(fout, "%s", line);
     }
 
-
-
     fclose(fin);
     fclose(fout);
 
-
+/// Testing git push
     return 0;
 }
