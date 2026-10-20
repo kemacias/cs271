@@ -1,9 +1,9 @@
 /****************************************
  * C-ploration 4 for CS 271
- * 
+ *
  * [NAME] $YOUR_NAME$
  * [TERM] FALL $YEAR$
- * 
+ *
  ****************************************/
 #include <stdio.h>
 #include <string.h>
