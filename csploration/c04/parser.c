@@ -1,9 +1,9 @@
 /****************************************
  * C-ploration 4 for CS 271
- * 
- * [NAME] $YOUR_NAME$
- * [TERM] FALL $YEAR$
- * 
+ *
+ * [NAME] $Kate Macias$
+ * [TERM] FALL $2026$
+ *
  ****************************************/
 #include "parser.h"
 
@@ -15,23 +15,25 @@
  *
  * returns: the stripped char* string
  */
-char *strip(char *s){	
+char *strip(char *s){
 
 	// your code here
-	
-    return s;	
+
+    return s;
 }
 
 /* Function: parse
  * -------------
- * iterate each line in the file and strip whitespace and comments. 
+ * iterate each line in the file and strip whitespace and comments.
  *
  * file: pointer to FILE to parse
  *
  * returns: nothing
  */
 void parse(FILE * file){
-	
+
+
+
 	// your code here
-	
+
 }
