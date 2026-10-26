@@ -16,8 +16,20 @@
  * returns: the stripped char* string
  */
 char *strip(char *s){
+    char s_new[strlen(s) + 1];
+    int i = 0;
 
-	// your code here
+    for (char *s2 = s; *s2; s2++) {
+        if (*s2 == '/' && *(s2 + 1) == '/') {
+            break;
+         }
+        else if (!isspace(*s2)) {
+            s_new[i++] = *s2;
+        }
+    }
+
+    s_new[i] = '\0';
+    strcpy(s, s_new);
 
     return s;
 }
@@ -31,9 +43,13 @@ char *strip(char *s){
  * returns: nothing
  */
 void parse(FILE * file){
+    char line[MAX_LINE_LENGTH] = {0};
 
-
-
-	// your code here
-
+    while (fgets(line, sizeof(line), file)) {
+        strip(line);
+        if (!*line) {
+            continue;
+         }
+printf("%s\n", line);
+    }
 }
