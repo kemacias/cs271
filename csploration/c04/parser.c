@@ -53,3 +53,7 @@ void parse(FILE * file){
 printf("%s\n", line);
     }
 }
+
+bool is_Atype(const char *line) {
+    return line[0] == '@';
+}
