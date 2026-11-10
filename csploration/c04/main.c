@@ -27,5 +27,4 @@ FILE *fin = fopen(argv[1], "r");
 
     return 0;
 
-    //git test comment
 }
