@@ -15,6 +15,7 @@
  *
  * returns: the stripped char* string
  */
+
 char *strip(char *s){
     char s_new[strlen(s) + 1];
     int i = 0;
@@ -46,6 +47,17 @@ bool is_Ctype(const char *line) {
     return !is_Atype(line) && !is_label(line);
 }
 
+char *extract_label(const char *line, char *label) {
+    int i = 0;
+
+    for (const char *s = line + 1; *s && *s != ')'; s++) {
+        label[i++] = *s;
+    }
+    label[i] = '\0';
+
+    return label;
+}
+
 /* Function: parse
  * -------------
  * iterate each line in the file and strip whitespace and comments.
@@ -55,22 +67,27 @@ bool is_Ctype(const char *line) {
  * returns: nothing
  */
 void parse(FILE * file){
-char line[MAX_LINE_LENGTH] = {0};
+    char line[MAX_LINE_LENGTH] = {0};
+    char label[MAX_LABEL_LENGTH] = {0};
 
-while (fgets(line, sizeof(line), file)) {
-    char *clean = strip(line);
-    if (!*clean) {
-        continue;
-    }
-    char inst_type = ' ';
-    if (is_Atype(clean)) {
-        inst_type = 'A';
-    } else if (is_Ctype(clean)) {
-        inst_type = 'C';
-    } else if (is_label(clean)) {
-        inst_type = 'L';
-    }
-    printf("%c  %s\n", inst_type, clean);
-}
+    while (fgets(line, sizeof(line), file)) {
+        strip(line);
+        if (!*line) {
+            continue;
+        }
 
+        char inst_type = ' ';
+
+        if (is_Atype(line)) {
+            inst_type = 'A';
+        } else if (is_label(line)) {
+            inst_type = 'L';
+            extract_label(line, label);
+            strcpy(line, label);
+        } else if (is_Ctype(line)) {
+            inst_type = 'C';
+        }
+
+        printf("%c  %s\n", inst_type, line);
+    }
 }

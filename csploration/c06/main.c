@@ -6,7 +6,7 @@
  *
  ****************************************/
 #include "parser.h"
-
+#include <stdlib.h>
 
 int main(int argc, const char *argv[])
 {
@@ -27,5 +27,4 @@ FILE *fin = fopen(argv[1], "r");
 
     return 0;
 
-    //git test comment
 }
